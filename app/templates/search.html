@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search Results</title> 
+        <style>
+            body {background-color: rgb(156, 206, 221);}
+             
+            h1 {
+                font-family: "Lucida Console", Monaco, monospace;
+                 text-align: center;
+                 color: rgb(7, 8, 82);
+                 font-size: 40px;
+            }
+
+            h2 {
+                font-family: "Lucida Console", Monaco, monospace;
+                text-align: center;
+                color: rgb(7, 8, 82);
+                font-size: 30px;
+                max-width: 50%;
+            }
+
+            div {
+                display: block;
+                margin: 0 auto;
+                width: 450px;
+                font-size: 25px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            a:hover {color: yellow;}
+        </style>
+    </head>
+    <body>
+        <h1>Video Game Recommender</h1>
+        <br>
+        <h2>Did you mean:</h2>
+        <div>
+        {% for game in games_list %}
+        <p><a href="/recommendations?game_name={{game}}">{{ game }}</a></p>
+        {% endfor %}
+        </div>
+    </body>
+</html>

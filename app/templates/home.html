@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title> 
+        <style>
+            body {background-color: rgb(156, 206, 221);}
+            
+            h1 {
+                font-family: "Lucida Console", Monaco, monospace;
+                 text-align: center;
+                 color: rgb(7, 8, 82);
+                 font-size: 40px;
+            }
+
+            h2 {
+                font-family: "Lucida Console", Monaco, monospace;
+                text-align: center;
+                color: rgb(7, 8, 82);
+                margin: 50px;
+            }
+
+            div {
+                display: block;
+                margin: 0 auto;
+                width:800px;
+                height:50px;
+            }
+
+            input {
+                width: 700px; 
+                height: 30px;
+                max-width: 75%;
+                font-family: "Lucida Console", Monaco, monospace; 
+                font-size: 20px;"
+            }
+
+            button {
+               width:120px;
+               height:30px;
+               max-width: 25%;
+               font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Video Game Recommender</h1>
+        <h2>Just completed an awesome game and looking for 
+            another one similar to it or maybe you just love that type of genre? 
+            Enter the name of that video game and get a list of similar games!</h2>
+        <br>
+        <br>
+        <form action="/search">
+            <div>
+                <input type="text" name="game_name">
+                <button type="submit">Search</button>
+            </div>
+        </form>
+    </body>
+</html>

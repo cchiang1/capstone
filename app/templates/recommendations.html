@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recommendations</title> 
+        <style>
+            body {background-color: rgb(156, 206, 221);}
+            
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            a:hover {color: yellow;}
+
+            h1 {
+                font-family: "Lucida Console", Monaco, monospace;
+                text-align: center;
+                color: rgb(7, 8, 82);
+                font-size: 40px;
+            }
+            
+            h2 {
+                font-family: "Lucida Console", Monaco, monospace;
+                color: rgb(7, 8, 82);
+                font-size: 25px;
+                margin: 40px;
+            }
+
+            .recommendations {
+                display: flex;
+                flex-wrap: wrap;
+                height: 700px;
+                justify-content: center;
+                align-content: space-around;
+                font-size: 25px;
+            }
+
+            .indiv_game {
+                display: grid;
+                grid-template-columns: 200px;
+                margin: 10px;
+            }
+
+            button {
+               width:75px;
+               height:25x;
+               font-size: 18px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Video Game Recommender</h1>
+        <h2>If you enjoyed playing {{ selected_game }}, you might also like: </h2>
+       
+        <div class="recommendations">
+            {% for name in names_list %}
+            <div class="indiv_game">   
+                <img src="{{games[name]['image']}}" width="150px" height="200px" alt="Image of {{name}}">
+                <div><a href="{{games[name]['store']}}" target="popup"> {{ name }}</a></div>
+            </div> 
+            {% endfor %}
+       </div>
+
+       <form action="/">
+            <p><button type="submit">Home</button></p>
+       </form>
+    </body>
+</html>
